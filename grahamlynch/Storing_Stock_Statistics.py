@@ -12,7 +12,7 @@ from .Database import create_table
 from .Database import check_for_metric
 from .Database import insert_new_stock
 from .Database import add_new_col
-from .grahammetrics import specific_investing_calc
+from .metrics import specific_investing_calc
 
 conn = sqlite3.connect('stocks.db') # creating a table for the key statistics
 c = conn.cursor()
