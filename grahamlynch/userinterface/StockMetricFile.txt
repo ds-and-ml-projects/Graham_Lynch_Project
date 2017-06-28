@@ -1,0 +1,37 @@
+P/E Ratio:
+This ratio is a comparison between the price you pay to buy a stock and the profit you may receive from 1 share in 1 year.
+
+P/BV ratio:
+This ratio represents the current market price divided by a company book value.
+This ratio is a comparison of what you might pay for a company compared to its value if the company liquidated (or terminated).
+A P/BV = 1 means that every dollar you spend purchasing the company also has 1 dollar of equity already in the business.
+
+Mr. Market:
+Mr. Market is described by Graham, is a very emotional person who could offer great deals on one day and bad deals the next.
+The investor should trust his own valuation or the stock and not be influenced by what others are doing.
+
+Current Ratio:
+This key ratio compares how much cash is expected to be converted to cash in the next 12 month (current assets),
+to how much cash that are expected to flow out (current liabilities). Warren Buffett prefers a ratio above 1.50.
+In other words for every $15 in cash inflow there must not be more than $10 in cash outflow.
+
+Current Assets:
+This measure is indicating how much cash that is expected to flow into the company the next 12 month.
+Current assets includes among many different accounts: inventory, people that owe you money, and cash itself.
+
+EPS:
+The earnings of a company dividend out to each individual shares. If the company has $500 in earnings and has 100 shares outstanding the EPS is $5.
+
+EPS Growth Rate:
+
+Debt to Equity Ratio:
+Sometimes known as (Debt/Ratio). This key ratio is comparing the debt to the equity in the company.
+Warren Buffett prefers a company with a debt to equity ratio that is below .5. In other word for every $10 in equity the company should only have $5 in debt.
+
+Market Share:
+
+Debt to Asset Ratio:
+
+Market Cap:
+
+PEG Ratio:
