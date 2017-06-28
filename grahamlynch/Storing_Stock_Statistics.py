@@ -258,8 +258,4 @@ class StockInformation:
     def graham_lynch_metrics(self):
         specific_investing_calc(self.conn, self.stock_DB)
 
-
-
-
-
 StockInformation()

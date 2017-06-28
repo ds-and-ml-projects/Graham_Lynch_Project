@@ -8,6 +8,6 @@ setup(
     url='Enter',
     author='Alex Guanga',
     author_email='aeguanga@gmail.com',
-    packages=['grahamlynch'],
+    packages=['grahamlynch', 'userinterface'],
     zip_safe=False
 )
