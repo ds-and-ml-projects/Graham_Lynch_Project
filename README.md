@@ -5,9 +5,7 @@ This repository performs three functionalities.
 
 Using *Yahoo Finance*, I query over 3000 stock into Python's library, SQLite. Also, it calculates the risk tolerance of the user. Lastly, it finds stocks that fit below the threshold of the user's riskiness.
 
-## Table of Contents
-1. [Installation][Install]
-2. [Functionality][Functionality]
+
 
 
 
