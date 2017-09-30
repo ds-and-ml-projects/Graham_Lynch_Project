@@ -1,9 +1,9 @@
-import os.path, time, datetime
+import sys, time, datetime
 
 """
 The following are some features that will be typically used throughout the GUI interface
 """
-db_time_modify = time.ctime(os.path.getmtime("stocks.db"))
+#db_time_modify = time.ctime(os.path.getmtime("stocks.db"))
 
 dict_features = {
         "large_font": ("Cambria", 17),

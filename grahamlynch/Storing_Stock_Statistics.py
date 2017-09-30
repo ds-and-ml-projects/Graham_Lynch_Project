@@ -6,6 +6,7 @@ import warnings
 import yahoo_finance
 import operator
 import math
+import sys
 from yahoo_finance import Share
 
 from .Database import create_table
@@ -29,14 +30,13 @@ quandl_errors = (TypeError, quandl.errors.quandl_error.NotFoundError, quandl.err
 class StockInformation:
 
     def __init__(self):
-        self.list_of_tick = self.get_all_tickers()
-        self.create_database()
+        self.list_of_tick = self.get_all_tickers() # Calling func. to import all the stocks
+        self.create_database()                     # list_of_ticks -> Def. list of all the tickers
         self.calling_metric_func()
         self.graham_lynch_metrics()
 
     def get_all_tickers(self):
-
-        with open('/Users/alexguanga/all_projects/grahamlynch/grahamlynch/companylist.csv', 'rb') as csvfile:
+        with open('./grahamlynch/companylist.csv', 'rb') as csvfile:
             file_of_tickers = csv.reader(csvfile, quotechar = '|')
             all_tickers = []
 
@@ -48,6 +48,7 @@ class StockInformation:
             if you would like for this program to run quicker, maybe choose a smaller amount of stocks to evaulate
             use this : amnt_stocks = len(key_statistic)
             '''
+            print(all_tickers)
             return all_tickers
 
     '''
@@ -68,12 +69,12 @@ class StockInformation:
         #self.eps_growth_rate()
         self.market_cap()
 
-    def using_quandl(self, value):
+    def using_quandl(self, value): # ONLY using mean_values from quandl
         warnings.simplefilter("ignore", category=RuntimeWarning)
         mean_values = value.values.mean()
         return mean_values
 
-    def db_validate(self, *args):
+    def db_validate(self, *args): # Updating or inserting info. from stocks
         val, ticker, col_name = args
 
         database_search = check_for_metric(self.stock_DB, ticker)
@@ -85,7 +86,7 @@ class StockInformation:
             add_new_col(*db_list_of_parameters)
 
     def marketshare(self):
-        for i in range(10): # CHANGE END VALUE WITH SELF.list_of_tickers
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 info_stock = Share(ticker)
@@ -98,7 +99,7 @@ class StockInformation:
                 pass
 
     def pe_ratio(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 info_stock = Share(ticker)
@@ -111,7 +112,7 @@ class StockInformation:
                 pass
 
     def bv_ratio(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 info_stock = Share(ticker)
@@ -124,7 +125,7 @@ class StockInformation:
                 pass
 
     def peg_ratio(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 info_stock = Share(ticker)
@@ -137,7 +138,7 @@ class StockInformation:
                 pass
 
     def current_ratio(self):
-        for i in range (10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 crnt_val = quandl.get("SF0/"+str(ticker)+"_CURRENTRATIO_MRY", authtoken="ivu6KgaViZxoyqic7QkE")
@@ -151,7 +152,7 @@ class StockInformation:
                 pass
 
     def debtasset_ratio(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 currasset_val = quandl.get("SF0/"+str(ticker)+"_ASSETSC_MRY", authtoken="ivu6KgaViZxoyqic7QkE")
@@ -170,7 +171,7 @@ class StockInformation:
                 pass
 
     def debtequity_ratio(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 ttlequity_val = quandl.get("SF0/"+str(ticker)+"_EQUITY_MRY", authtoken="ivu6KgaViZxoyqic7QkE")
@@ -190,7 +191,8 @@ class StockInformation:
 
     def market_cap(self):
         mid_cap, large_cap = 2000000000, 10000000000
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
+
             try:
                 ticker = self.list_of_tick[i][0]
                 info_stock = Share(ticker)
@@ -213,7 +215,7 @@ class StockInformation:
                 pass
 
     def eps_growth_rate(self):
-        for i in range(10):
+        for i in range(len(self.list_of_tick)):
             try:
                 ticker = self.list_of_tick[i][0]
                 EPS = quandl.get("SF0/"+str(ticker)+"_EPS_MRY", authtoken="ivu6KgaViZxoyqic7QkE")

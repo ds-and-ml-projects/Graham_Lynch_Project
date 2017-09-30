@@ -1,7 +1,6 @@
 import Tkinter as tk
 import ttk
 
-from ..Storing_Stock_Statistics import StockInformation
 
 init_prompt = """
 We will be updating information for over 2,500 stocks. This take approximately one hour.
@@ -19,6 +18,7 @@ def retrieve_db():
         db_window.destroy()
 
     def make_new_database():
+        from ..Storing_Stock_Statistics import StockInformation
         StockInformation()
         db_window.destroy()
 
