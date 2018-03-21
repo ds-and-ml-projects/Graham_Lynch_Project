@@ -48,7 +48,6 @@ class StockInformation:
             if you would like for this program to run quicker, maybe choose a smaller amount of stocks to evaulate
             use this : amnt_stocks = len(key_statistic)
             '''
-            print(all_tickers)
             return all_tickers
 
     '''
@@ -226,13 +225,11 @@ class StockInformation:
                     for j in range((len(EPS.values)-1), -1, -1):
                         if (EPS.values[j] > 0):
                             current_year = EPS.values[j]
-                            print current_year
                             break
 
                     for k in range(len(EPS.values)):
                         if (EPS.values[k] > 0):
                             last_avail_yr = EPS.values[k]
-                            print last_avail_yr
                             break
 
                     for num in (num for num,x in enumerate(EPS.values) if x == current_year):
