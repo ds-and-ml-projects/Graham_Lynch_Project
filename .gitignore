@@ -6,3 +6,5 @@ grahamlynch.egg-info/
 Running-the-Code.png
 
 grahamlynch/**/*.pyc
+grahamlynch/__pycache__
+grahamlynch/userinterface/__pycache__
