@@ -1,6 +1,6 @@
 *.pyc 
 
 .DS_Store
-dist
-grahamlynch.egg-info
+dist/
+grahamlynch.egg-info/
 Running-the-Code.png
