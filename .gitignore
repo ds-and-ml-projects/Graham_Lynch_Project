@@ -4,3 +4,5 @@
 dist/
 grahamlynch.egg-info/
 Running-the-Code.png
+
+grahamlynch/*.pyc
