@@ -1,10 +1,6 @@
 *.pyc 
 
 .DS_Store
-
-./Election2016Analysis/config.py
-
-/Users/alexguanga/all_projects/ds-portfolio/TitanicaAnalysis/RPART_SUB_20170714_1.csv
-/Users/alexguanga/all_projects/ds-portfolio/TitanicaAnalysis/RandomF_SUB_20170621.csv
-/Users/alexguanga/all_projects/ds-portfolio/__pycache__
-
+./dist
+./grahamlynch.egg-info
+./Running-the-Code.png
