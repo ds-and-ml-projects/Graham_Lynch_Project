@@ -4,6 +4,9 @@
 dist/
 grahamlynch.egg-info/
 Running-the-Code.png
+backup.py
+Database_Backup.py
+
 
 grahamlynch/**/*.pyc
 grahamlynch/__pycache__
