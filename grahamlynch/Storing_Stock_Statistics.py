@@ -227,6 +227,8 @@ class StockInformation:
                             current_year = EPS.values[j]
                             break
 
+
+
                     for k in range(len(EPS.values)):
                         if (EPS.values[k] > 0):
                             last_avail_yr = EPS.values[k]
